@@ -101,6 +101,27 @@ export const trabalhos = [
   },
 ];
 
+export const formacao = [
+  {
+    curso: "Análise e Desenvolvimento de Sistemas",
+    nivel: "Graduação",
+    instituicao: "UniFael",
+    situacao: "Formando",
+  },
+  {
+    curso: "Técnico em Informática",
+    nivel: "Curso técnico",
+    instituicao: "IFPA, Campus Avançado Vigia",
+    situacao: "Concluído",
+  },
+  {
+    curso: "Técnico em Meio Ambiente",
+    nivel: "Curso técnico",
+    instituicao: "EETEPA, Vigia",
+    situacao: "Concluído",
+  },
+];
+
 export const referencias = [
   { empresa: "Juca Depósito de Água", servico: "Site da empresa" },
   { empresa: "Natehcia Advocacia", servico: "Sistema do escritório" },

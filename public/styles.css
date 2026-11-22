@@ -115,6 +115,21 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--destaque); outl
   .btn-ref { width: 100%; }
 }
 
+/* Formação */
+.formacao { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.form-item {
+  position: relative; background: var(--cartao); border: 1px solid var(--linha); border-radius: var(--raio);
+  padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 6px;
+  border-top: 4px solid var(--destaque);
+}
+.form-item h3 { font-size: 21px; }
+.form-inst { margin: 0; color: var(--cinza); font-size: 15px; }
+.selo {
+  align-self: flex-start; margin-top: 10px; font: 600 12px/1 var(--texto);
+  padding: 6px 10px; border-radius: 999px; background: var(--papel); border: 1px solid var(--linha); color: var(--tinta);
+}
+.selo-andamento { background: var(--destaque); border-color: var(--destaque); color: #fff; }
+
 /* Contato */
 .contato { text-align: left; }
 .contato h2 { max-width: 18ch; }

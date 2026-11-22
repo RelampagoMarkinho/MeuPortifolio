@@ -2,7 +2,14 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { linkWhats, mensagemReferencia } from "../public/links.js";
-import { WHATSAPP, trabalhos, referencias } from "../public/data.js";
+import { WHATSAPP, trabalhos, referencias, formacao } from "../public/data.js";
+
+// formação
+assert.equal(formacao.length, 3);
+for (const f of formacao) {
+  assert.ok(f.curso && f.instituicao && f.situacao, `formação incompleta: ${f.curso}`);
+}
+assert.equal(formacao[0].curso, "Análise e Desenvolvimento de Sistemas");
 
 // links
 assert.equal(

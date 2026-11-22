@@ -1,4 +1,4 @@
-import { WHATSAPP, trabalhos, referencias } from "./data.js";
+import { WHATSAPP, trabalhos, referencias, formacao } from "./data.js";
 import { linkWhats, mensagemReferencia, MENSAGEM_CONTATO } from "./links.js";
 
 const categoria = (t) => (t.tipo === "Site" ? "Site" : t.tipo === "Sistema" ? "Sistema" : "App");
@@ -65,7 +65,20 @@ function referencia(r) {
   );
 }
 
+function itemFormacao(f) {
+  const andamento = f.situacao !== "Concluído";
+  return el(
+    "li",
+    { class: "form-item" },
+    el("p", { class: "tipo" }, f.nivel),
+    el("h3", {}, f.curso),
+    el("p", { class: "form-inst" }, f.instituicao),
+    el("span", { class: andamento ? "selo selo-andamento" : "selo" }, f.situacao)
+  );
+}
+
 document.getElementById("lista-trabalhos").append(...trabalhos.map(cartao));
+document.getElementById("lista-formacao").append(...formacao.map(itemFormacao));
 document.getElementById("lista-referencias").append(...referencias.map(referencia));
 document.getElementById("n-trabalhos").textContent = String(trabalhos.length);
 document.querySelectorAll('[data-whats="contato"]').forEach((a) => botaoWhats(a, MENSAGEM_CONTATO));
