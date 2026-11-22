@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MJR Softwares</title>
+  <meta name="description" content="Sistemas, aplicativos e sites sob medida. Veja trabalhos e referências.">
+  <meta property="og:title" content="MJR Softwares — Portfólio">
+  <meta property="og:description" content="Sistemas, aplicativos e sites sob medida. Veja trabalhos e referências.">
+  <meta property="og:image" content="img/icone.png">
+  <meta name="theme-color" content="#0b1a3a">
+  <link rel="icon" href="img/icone.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="wrap">
+      <img class="logo" src="img/logo-mjr.webp" alt="MJR Softwares" width="512" height="512">
+      <h1>Sistemas, aplicativos e sites <span class="marca">sob medida</span> para o seu negócio.</h1>
+      <p class="sub">Do balcão da rodoviária ao escritório de advocacia: eu entendo como a sua empresa trabalha e construo a ferramenta que resolve o dia a dia.</p>
+      <div class="acoes">
+        <a class="btn btn-whats" data-whats="contato" href="#contato">Falar no WhatsApp</a>
+        <a class="btn btn-linha" href="#trabalhos">Ver trabalhos</a>
+      </div>
+      <ul class="numeros" aria-label="Resumo">
+        <li><strong id="n-trabalhos">11</strong><span>trabalhos entregues</span></li>
+        <li><strong>Android, PC e web</strong><span>onde o sistema roda</span></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="trabalhos" class="secao">
+      <div class="wrap">
+        <p class="rotulo">{ Trabalhos }</p>
+        <h2>O que eu já construí</h2>
+        <div class="filtros" role="tablist" aria-label="Filtrar trabalhos">
+          <button class="filtro ativo" data-filtro="todos" role="tab" aria-selected="true">Todos</button>
+          <button class="filtro" data-filtro="App" role="tab" aria-selected="false">Apps</button>
+          <button class="filtro" data-filtro="Sistema" role="tab" aria-selected="false">Sistemas</button>
+          <button class="filtro" data-filtro="Site" role="tab" aria-selected="false">Sites</button>
+        </div>
+        <div id="lista-trabalhos" class="grade"></div>
+      </div>
+    </section>
+
+    <section id="referencias" class="secao secao-escura">
+      <div class="wrap">
+        <p class="rotulo">{ Referências }</p>
+        <h2>Quem confia no meu trabalho</h2>
+        <p class="sub">Quer conversar com um desses clientes antes de fechar? Peça o contato e eu passo para você.</p>
+        <ul id="lista-referencias" class="refs"></ul>
+      </div>
+    </section>
+
+    <section id="contato" class="secao contato">
+      <div class="wrap">
+        <h2>Tem um processo que dá trabalho todo dia?</h2>
+        <p class="sub">Me conta como funciona hoje. Eu respondo com uma ideia de como resolver.</p>
+        <a class="btn btn-whats" data-whats="contato" href="#contato">Falar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap">MJR Softwares</div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
