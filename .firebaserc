@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "cadas-otuduy"
+  },
+  "targets": {
+    "cadas-otuduy": {
+      "hosting": {
+        "portfolio": ["mjr-softwares"]
+      }
+    }
+  }
+}

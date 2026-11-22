@@ -9,6 +9,8 @@ as empresas que são referência e o botão para falar comigo no WhatsApp.
 - Imagens: `public/img` (WebP, sem dados pessoais visíveis)
 - Testar os dados: `node tests/check.mjs` (tem que mostrar `ok`)
 - Ver no computador: `node tools/serve.mjs` e abrir http://localhost:5180
+- Publicar: `firebase deploy --only hosting:portfolio` → https://mjr-softwares.web.app
+  (só esse alvo, para não mexer no site da Juca que fica no mesmo projeto)
 
 As referências mostram só o nome da empresa e o serviço. O botão "Pedir contato"
 manda mensagem para mim, e eu passo o contato para quem estiver negociando.
