@@ -1,5 +1,5 @@
 // Número do WhatsApp do Marcos, só dígitos com 55 + DDD. Vazio = botões "em breve".
-export const WHATSAPP = "";
+export const WHATSAPP = "5591992189157";
 
 export const trabalhos = [
   {
