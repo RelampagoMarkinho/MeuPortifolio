@@ -27,7 +27,9 @@ assert.equal(
 assert.ok(WHATSAPP === "" || /^55\d{10,11}$/.test(WHATSAPP), "WHATSAPP inválido");
 
 // referências: só empresa e serviço, nada de contato
-assert.ok(referencias.length >= 4);
+assert.equal(referencias.length, 6);
+assert.ok(referencias.some((r) => r.empresa === "RB Azulão"));
+assert.ok(referencias.some((r) => r.empresa === "Cooperativa de Transporte Complementar de Vigia de Nazaré"));
 for (const r of referencias) {
   assert.deepEqual(Object.keys(r).sort(), ["empresa", "servico"]);
 }

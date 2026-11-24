@@ -40,6 +40,7 @@ export const trabalhos = [
   {
     id: "azulao",
     nome: "RB Azulão",
+    cliente: "RB Azulão",
     tipo: "Sistema",
     resumo:
       "Sistema de distribuidora de água: PDV rápido por produto, entregas acompanhadas no mapa em tempo real, estoque com alerta e relatórios de vendas.",
@@ -166,6 +167,8 @@ export const formacao = [
 export const referencias = [
   { empresa: "Juca Depósito de Água", servico: "Site da empresa" },
   { empresa: "Nathércia Jansen Advocacia", servico: "Sistema de gestão do escritório" },
+  { empresa: "Cooperativa de Transporte Complementar de Vigia de Nazaré", servico: "Rotex, sistema de passagens" },
+  { empresa: "RB Azulão", servico: "Sistema de vendas e entregas" },
   { empresa: "Centro de Monitoramento de Vigia", servico: "Sistema de monitoramento e ocorrências" },
   { empresa: "Empresa do abacaxi (nome a confirmar)", servico: "Sistema" },
 ];
