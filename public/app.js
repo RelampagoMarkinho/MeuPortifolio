@@ -28,11 +28,63 @@ function botaoWhats(a, mensagem) {
 }
 
 function capa(t) {
-  if (t.img) {
-    return el("img", { class: "capa", src: t.img, alt: `Tela do ${t.nome}`, loading: "lazy", width: "640", height: "400" });
+  if (t.fotos.length) {
+    const f = t.fotos[0];
+    const botao = el(
+      "button",
+      { class: "capa-botao", type: "button", "aria-label": `Ver telas do ${t.nome}` },
+      el("img", { class: "capa", src: f.src, alt: f.legenda, loading: "lazy", width: "640", height: "400" }),
+      t.fotos.length > 1 ? el("span", { class: "capa-qtd" }, `${t.fotos.length} telas`) : null
+    );
+    botao.addEventListener("click", () => abrirGaleria(t, 0));
+    return botao;
   }
   return el("div", { class: "capa capa-vazia", "aria-hidden": "true" }, el("span", {}, t.nome));
 }
+
+// Galeria
+const galeria = document.getElementById("galeria");
+const gImg = galeria.querySelector(".g-img");
+const gLegenda = galeria.querySelector(".g-legenda");
+const gTitulo = galeria.querySelector(".g-titulo");
+const gContador = galeria.querySelector(".g-contador");
+let gAtual = null;
+let gIndice = 0;
+
+function mostrar(i) {
+  const n = gAtual.fotos.length;
+  gIndice = (i + n) % n;
+  const f = gAtual.fotos[gIndice];
+  gImg.src = f.src;
+  gImg.alt = f.legenda;
+  gLegenda.textContent = f.legenda;
+  gContador.textContent = `${gIndice + 1} / ${n}`;
+  galeria.classList.toggle("unica", n === 1);
+}
+
+function abrirGaleria(t, i) {
+  gAtual = t;
+  gTitulo.textContent = t.nome;
+  mostrar(i);
+  galeria.showModal();
+}
+
+galeria.querySelector(".g-ant").addEventListener("click", () => mostrar(gIndice - 1));
+galeria.querySelector(".g-prox").addEventListener("click", () => mostrar(gIndice + 1));
+galeria.querySelector(".g-fechar").addEventListener("click", () => galeria.close());
+galeria.addEventListener("click", (e) => { if (e.target === galeria) galeria.close(); });
+galeria.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") mostrar(gIndice - 1);
+  if (e.key === "ArrowRight") mostrar(gIndice + 1);
+});
+let toqueX = null;
+gImg.addEventListener("touchstart", (e) => { toqueX = e.touches[0].clientX; }, { passive: true });
+gImg.addEventListener("touchend", (e) => {
+  if (toqueX == null) return;
+  const dx = e.changedTouches[0].clientX - toqueX;
+  if (Math.abs(dx) > 40) mostrar(gIndice + (dx < 0 ? 1 : -1));
+  toqueX = null;
+});
 
 function cartao(t) {
   const tags = el("ul", { class: "tags" }, ...t.tecnologias.map((x) => el("li", {}, x)));

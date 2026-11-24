@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { linkWhats, mensagemReferencia } from "../public/links.js";
 import { WHATSAPP, trabalhos, referencias, formacao } from "../public/data.js";
@@ -42,6 +42,17 @@ const ids = trabalhos.map((t) => t.id);
 assert.equal(new Set(ids).size, ids.length, "id repetido");
 for (const t of trabalhos) {
   assert.ok(t.nome && t.resumo && Array.isArray(t.tecnologias), `trabalho incompleto: ${t.id}`);
+  assert.ok(Array.isArray(t.fotos), `fotos deve ser lista: ${t.id}`);
+  for (const f of t.fotos) {
+    assert.ok(f.src && f.legenda, `foto sem src/legenda em ${t.id}`);
+    assert.ok(existsSync(fileURLToPath(new URL(`../public/${f.src}`, import.meta.url))), `foto não existe: ${f.src}`);
+    assert.ok(!f.src.startsWith("assets"), `foto original sem borrão: ${f.src}`);
+  }
 }
+const porId = Object.fromEntries(trabalhos.map((t) => [t.id, t]));
+assert.equal(porId.natehcia.cliente, "Nathércia Jansen Advocacia");
+assert.equal(porId.natehcia.fotos.length, 5);
+assert.equal(porId.azulao.fotos.length, 5);
+assert.equal(porId.rotex.fotos.length, 7);
 
 console.log("ok");

@@ -115,6 +115,35 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--destaque); outl
   .btn-ref { width: 100%; }
 }
 
+/* Capa clicável */
+.capa-botao { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.capa-qtd {
+  position: absolute; right: 12px; bottom: 12px; padding: 6px 12px; border-radius: 999px;
+  background: rgba(11, 26, 58, .85); color: #fff; font: 600 13px/1 var(--texto);
+  backdrop-filter: blur(4px);
+}
+.capa-botao:hover .capa-qtd { background: var(--destaque); }
+
+/* Galeria */
+.galeria {
+  width: min(1100px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); padding: 0;
+  border: 0; border-radius: var(--raio); background: var(--tinta); color: #fff; overflow: hidden;
+}
+.galeria::backdrop { background: rgba(5, 12, 28, .8); }
+.g-topo { display: flex; align-items: center; gap: 12px; padding: 12px 14px 12px 18px; }
+.g-titulo { font: 700 18px/1.2 var(--titulo); flex: 1; min-width: 0; }
+.g-contador { color: #aab6cf; font-size: 14px; }
+.g-fechar, .g-nav button {
+  width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;
+  background: #1b2d57; color: #fff; font-size: 22px; line-height: 1;
+}
+.g-fechar:hover, .g-nav button:hover { background: var(--destaque); }
+.g-figura { margin: 0; }
+.g-img { width: 100%; max-height: calc(100dvh - 190px); object-fit: contain; background: #050c1c; }
+.g-legenda { padding: 12px 18px 0; color: #d5dcea; font-size: 15px; }
+.g-nav { display: flex; justify-content: center; gap: 12px; padding: 14px; }
+.galeria.unica .g-nav, .galeria.unica .g-contador { display: none; }
+
 /* Formação */
 .formacao { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
 .form-item {
