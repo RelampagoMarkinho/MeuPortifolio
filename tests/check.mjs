@@ -56,5 +56,10 @@ assert.equal(porId.natehcia.cliente, "Nathércia Jansen Advocacia");
 assert.equal(porId.natehcia.fotos.length, 5);
 assert.equal(porId.azulao.fotos.length, 5);
 assert.equal(porId.rotex.fotos.length, 7);
+assert.equal(porId.vemtebora.status, "Em desenvolvimento");
+assert.equal(porId.senha, undefined, "Senha de Atendimento deve sair");
+assert.equal(porId.f5rodoviario, undefined, "F5 Rodoviário deve sair");
+assert.equal(porId.encomendafacil.fotos.length, 4);
+assert.equal(porId["cm-vigia"].fotos.length, 3);
 
 console.log("ok");

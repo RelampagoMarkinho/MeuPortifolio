@@ -84,6 +84,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--destaque); outl
 .cartao-corpo { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 6px; }
 .tipo { margin: 0; font: 600 12px/1 var(--texto); letter-spacing: .06em; text-transform: uppercase; color: var(--destaque-escuro); }
 .cartao h3 { font-size: 22px; }
+.status-dev {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 10px; border-radius: 999px; font: 600 12px/1 var(--texto);
+  background: #fff4e0; color: #9a5b00; border: 1px solid #f3d29a;
+}
+.status-dev::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #f0a020; }
 .cliente { margin: 0; font-weight: 600; font-size: 14px; }
 .resumo { margin: 4px 0 0; color: var(--cinza); font-size: 15px; }
 .tags { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }

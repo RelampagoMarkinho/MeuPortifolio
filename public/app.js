@@ -97,6 +97,7 @@ function cartao(t) {
       { class: "cartao-corpo" },
       el("p", { class: "tipo" }, t.tipo),
       el("h3", {}, t.nome),
+      t.status ? el("span", { class: "status-dev" }, t.status) : null,
       t.cliente ? el("p", { class: "cliente" }, `Cliente: ${t.cliente}`) : null,
       el("p", { class: "resumo" }, t.resumo),
       t.tecnologias.length ? tags : null

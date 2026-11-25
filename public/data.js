@@ -69,11 +69,17 @@ export const trabalhos = [
     resumo:
       "Registro de encomendas em agências de transporte. Imprime a etiqueta na hora por impressora Bluetooth e faz o fechamento do dia com a cobrança automática.",
     tecnologias: ["Flutter", "Firebase", "PWA", "Impressão Bluetooth"],
-    fotos: [],
+    fotos: [
+      { src: "img/encomendafacil/inicio.webp", legenda: "Resumo do dia da agência" },
+      { src: "img/encomendafacil/encomendas.webp", legenda: "Encomendas com rota, situação e valor" },
+      { src: "img/encomendafacil/caixa.webp", legenda: "Caixa com lucro da agência, sangria e suprimento" },
+      { src: "img/encomendafacil/precos.webp", legenda: "Tabela de frete por cidade de destino" },
+    ],
   },
   {
     id: "vemtebora",
     nome: "Vemtebora",
+    status: "Em desenvolvimento",
     tipo: "Plataforma",
     resumo:
       "Plataforma de viagens de van no modelo Uber: app do passageiro com horário marcado, app do dono e do motorista, painel de aprovação e site.",
@@ -91,13 +97,17 @@ export const trabalhos = [
   },
   {
     id: "cm-vigia",
-    nome: "CM System Vigia",
+    nome: "CIOV Vigia",
     cliente: "Centro de Monitoramento de Vigia",
     tipo: "Sistema",
     resumo:
-      "Controle do centro de monitoramento: boletins de ocorrência, relatórios, sistema de vídeo, postos de serviço e controle de usuários.",
-    tecnologias: ["Delphi", "Windows"],
-    fotos: [],
+      "Sistema do centro de monitoramento: situação das câmeras da cidade em tempo real, ocorrências, protocolo digital de ofícios e memorandos, livro de turnos, gestão alimentar e relatórios.",
+    tecnologias: ["Sistema web", "Monitoramento de câmeras", "Relatórios"],
+    fotos: [
+      { src: "img/ciov/dashboard.webp", legenda: "Painel com a saúde das câmeras e falhas ativas" },
+      { src: "img/ciov/protocolo.webp", legenda: "Protocolo digital com numeração automática" },
+      { src: "img/ciov/relatorios.webp", legenda: "Relatório de ocorrências por tipo e aproveitamento" },
+    ],
   },
   {
     id: "abacaxi",
@@ -122,22 +132,6 @@ export const trabalhos = [
     nome: "CoopSalgado",
     tipo: "Sistema",
     resumo: "Controle da cooperativa de transporte: embarque, carros, passageiros isentos e fechamento do dia.",
-    tecnologias: ["Delphi", "Windows"],
-    fotos: [],
-  },
-  {
-    id: "f5rodoviario",
-    nome: "F5 Rodoviário",
-    tipo: "Sistema",
-    resumo: "Emissão de passagens e gerenciamento da rodoviária, com visual moderno e fácil de usar.",
-    tecnologias: ["Delphi", "Windows"],
-    fotos: [],
-  },
-  {
-    id: "senha",
-    nome: "Senha de Atendimento",
-    tipo: "Sistema",
-    resumo: "Gera senhas comuns e prioritárias e chama na tela de atendimento, com segunda chamada.",
     tecnologias: ["Delphi", "Windows"],
     fotos: [],
   },

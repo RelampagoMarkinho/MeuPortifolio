@@ -71,6 +71,32 @@ FOTOS = {
         (163, 412, 450, 448),
     ],
     ("Rotex para Terminal", "Controle de Usuario.PNG", "rotex/permissoes"): [],
+    # CIOV Vigia: nomes de servidores, locais de câmeras e de ocorrências
+    ("Ciov", "Capturar.PNG", "ciov/dashboard"): [
+        (1155, 232, 1300, 298),  # plantão atual
+        (1072, 625, 1370, 812),  # falhas ativas (locais das câmeras)
+    ],
+    ("Ciov", "Capturar2.PNG", "ciov/protocolo"): [
+        (568, 318, 945, 805),    # assuntos (nomes de pessoas)
+        (948, 318, 1172, 805),   # emitido por
+    ],
+    ("Ciov", "Capturar3.PNG", "ciov/relatorios"): [
+        (750, 598, 1392, 612), (690, 625, 1392, 692),   # local e relato 1
+        (745, 740, 1392, 755), (690, 765, 1392, 812),   # local e relato 2
+        (330, 805, 630, 838),    # locais de incidência
+    ],
+    # EncomendaFácil: aviso de bloqueio, nomes de remetente/destinatário e telefone
+    ("EncomendaFacil", "Capturar.PNG", "encomendafacil/inicio"): [
+        (385, 74, 1000, 112),
+    ],
+    ("EncomendaFacil", "Capturar2.PNG", "encomendafacil/encomendas"): [
+        (448, 250, 565, 272), (448, 376, 565, 398), (448, 502, 565, 524), (448, 628, 565, 650), (448, 754, 565, 776),
+        (970, 250, 1088, 272), (970, 376, 1088, 398), (970, 502, 1088, 524), (970, 628, 1088, 650),
+    ],
+    ("EncomendaFacil", "Capturar3.PNG", "encomendafacil/caixa"): [],
+    ("EncomendaFacil", "Capturar4.PNG", "encomendafacil/precos"): [
+        (915, 82, 1060, 104),    # telefone
+    ],
 }
 
 
